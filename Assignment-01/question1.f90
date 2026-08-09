@@ -4,23 +4,21 @@ program matrix_operations
     integer, dimension(4, 4) :: A, B
     integer :: i, j
 
-    ! -------------------------------------------------------------
-    ! 1. Read the matrix A from an input file named 'input.txt'
-    ! -------------------------------------------------------------
     open(unit=10, file='matrix_input.txt', status='old', action='read')
     do i = 1, 4
         read(10, *) (A(i, j), j = 1, 4)
     end do
     close(10)
 
-    ! Open output file named 'output.txt'
+    ! Open output file
     open(unit=20, file='output.txt', status='replace', action='write')
+
     !(i)
     write(20, '(A)') '(i) Matrix A:'
     do i = 1, 4
         write(20, '(4(I3, 1X))') (A(i, j), j = 1, 4)
     end do
-    write(20, *) ! Empty line
+    write(20, *)
 
     !(ii)
 
@@ -28,7 +26,7 @@ program matrix_operations
     do i = 2, 4, 2
         write(20, '(4(I3, 1X))') (A(i, j), j = 1, 4)
     end do
-    write(20, *) ! Empty line
+    write(20, *)
 
     !(iii)
 
@@ -38,7 +36,6 @@ program matrix_operations
             if (i == 1 .or. i == 4 .or. j == 1 .or. j == 4) then
                 write(20, '(I3, 1X)', advance='no') A(i, j)
             else
-                ! Write spaces for the inner elements
                 write(20, '(A4)', advance='no') '    '
             end if
         end do
@@ -60,7 +57,7 @@ program matrix_operations
 
     write(20, '(A)') '(iv) Matrix B (boundary replaced with 0):'
     do i = 1, 4
-        write(20, '(4(I3, 1X))') (B(i, j), j = 1, 4)
+        write(20, '(4(I4))') (B(i, j), j = 1, 4)
     end do
 
     close(20)
