@@ -3,3 +3,4 @@
 
 # Explicitly ignore Fortran object files ending in .f90.o
 *.f90.o
+.vscode/
