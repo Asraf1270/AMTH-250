@@ -1,5 +1,0 @@
-# Ignore all object files
-*.o
-
-# Explicitly ignore Fortran object files ending in .f90.o
-*.f90.o
