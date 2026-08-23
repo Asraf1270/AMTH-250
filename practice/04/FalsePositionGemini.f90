@@ -44,6 +44,8 @@ program false_position
     write(30, *) ""
     write(30, '(A, F10.6)') "Approximate solution: ", P_n
 
+    close(30)
+
 contains
 
     function f(x) result(res)
