@@ -29,6 +29,8 @@ program FixedPoint
     write(40, *)""
     write(40,'(A, F10.6)') "Approximate root: ", pn
 
+    close(40)
+    
 contains
     function g(x) result(temp)
         implicit none
