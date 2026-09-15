@@ -4,7 +4,7 @@ program truth_table
     integer :: i, j
     logical, dimension(2) :: bool_vals = (/.true., .false./)
     
-    open(unit = 30, file = 'out_A4Q4.txt', action = 'write')
+    open(unit = 30, file = 'out_A4Q3.txt', action = 'write')
 
     write(30, *) "-------------------------------------------------------------"
     write(30, '(4a6, 2a15)') 'p', 'q', 'p->q', 'p<->q', '(p^q)v(!p ^ !q)', 'Equal?'

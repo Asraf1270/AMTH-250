@@ -1,0 +1,20 @@
+===========================================================
+ COMPARISON OF TOWER OF HANOI (H_n) AND MERSENNE (M_n)
+===========================================================
+  n         H_n (Hanoi)      M_n (Mersenne)      H_n == M_n?
+-----------------------------------------------------------
+  1               1                   1              T
+  2               3                   3              T
+  3               7                   7              T
+  4              15                  15              T
+  5              31                  31              T
+  6              63                  63              T
+  7             127                 127              T
+  8             255                 255              T
+  9             511                 511              T
+ 10            1023                1023              T
+===========================================================
+CONCLUSION: H_n = M_n for every n in [1, 10].
+The minimal number of moves to solve the Tower of Hanoi
+with n disks is always equal to the n-th Mersenne number.
+===========================================================
