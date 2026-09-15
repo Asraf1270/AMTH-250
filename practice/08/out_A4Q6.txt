@@ -1,0 +1,17 @@
+ ---------------------------------------------------------------------
+         n        Mn    status
+         0         0   Neither
+         1         1   Neither
+         2         3     Prime
+         3         7     Prime
+         4        15 Composite
+         5        31     Prime
+         6        63 Composite
+         7       127     Prime
+         8       255 Composite
+         9       511 Composite
+        10      1023 Composite
+        11      2047 Composite
+        12      4095 Composite
+        13      8191     Prime
+        14     16383 Composite
