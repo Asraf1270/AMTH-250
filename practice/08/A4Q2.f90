@@ -1,45 +1,36 @@
 program thermostat
     implicit none
-    logical :: f, b, c, v1, v2, is_tautology
-    integer :: i, j, k
-    logical, dimension(2) :: bool_vals = (/.true., .false./)
+    logical :: w, h, v1, v2, is_taut
+    integer :: i, j
+    logical, dimension(2) :: bool = (/ .true., .false./)
 
-    open(unit = 10, file ='out_A4Q2.txt', action = 'write')
+    open(unit = 10, file = 'out_A4Q2.txt', action = 'write')
+    write(10, *) '----------------------------------------------------------'
+    write(10, '(6A6)') 'W', 'H', 'V1', 'V2', 'EQV'
+    write(10, *) '----------------------------------------------------------'
 
-    write(10, *) "------------------------------------------------------------------"
-    write(10, '(6A5)') 'F', 'B', 'C', 'V1', 'V2', 'Equivalent?'
-    write(10, *) "------------------------------------------------------------------"
+    is_taut = .true.
+    do i = 0, 1
+        do j = 0, 1
+            w = bool(i)
+            h = bool(j)
 
+            v1 = w .and. h 
+            v2 = .not.((.not. w) .or. (.not. h))
 
-    is_tautology = .true.
+            write(10, '(5(5x, l1))') w, h, v1, v2, (v1 .eqv. v2)
 
-    do i = 1, 2
-        do j = 1, 2
-            do k = 1, 2
-                f = bool_vals(i)
-                b = bool_vals(j)
-                c = bool_vals(k)
-
-                v1 = c .eqv. (f .and. b)
-                v2 = .not. (.not. f .or. .not. b ) .or. (.not. c )
-
-                if(.not.(v1 .eqv. v2)) then
-                    is_tautology = .false.
-                end if
-
-                write(10, '(4x, L1, 4X, L1, 4X, L1, 4X, L1, 4X, L1, 4X,"|",  L1, 4X)') f, b, c, v1, v2, (v1 .eqv. v2)
-
-            end do
+            if(v1 .neqv. v2) then
+                is_taut = .false.
+            end if
         end do
     end do
 
-    write(10, *) "------------------------------------------------------------------"
-    if(is_tautology) then
-        write(10, *) 'Conclusion: (A) <-> (B) is a tautology'
+    write(10, *) '----------------------------------------------------------'
+    if (is_taut) then
+        write(10, *) '(𝐴) ↔ (𝐵) is a tautology.'
     else
-        write(10, *) 'Conclusion: (A) <-> (B) is NOT a tautology'
+        write(10, *) '(𝐴) ↔ (𝐵) is not a tautology.'
     end if
-    write(10, *) "------------------------------------------------------------------"
     close(10)
-
-end program 
+end program thermostat
