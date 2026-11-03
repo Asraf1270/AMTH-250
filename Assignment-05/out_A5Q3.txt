@@ -1,0 +1,4 @@
+Velocity at t0:     5.200000 m/s
+Acceleration at t0:     5.666667 m/s^2
+Velocity at t6:    14.825000 m/s
+Acceleration at t6:    10.458333 m/s^2
