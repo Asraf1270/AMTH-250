@@ -1,0 +1,7 @@
+ Exact value of x(t0) =    8.1372924611792801     
+ 
+         Method           |   h    |    Approx. value    | Exact value |   Error
+(i) Three-point midpoint  | 0.25   |  7.75222E+00 |  8.13729E+00 |  3.85068E-01
+(ii) Three-point endpoint | 0.25   |  8.91360E+00 |  8.13729E+00 |  7.76307E-01
+(iii) Five-point midpoint | 0.50   |  7.84041E+00 |  8.13729E+00 |  2.96880E-01
+(iv) Five-point endpoint  | 0.50   |  8.08059E+00 |  8.13729E+00 |  5.67005E-02

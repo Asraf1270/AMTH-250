@@ -1,0 +1,17 @@
+ Problem 5: Romberg integration of E = int_0^{pi/4} t^2 cos(t) dt
+ Exact E =     0.1326861846 J
+ Tolerance =   1.00E-06
+
+ Romberg table R(k,j):  rows = k (h halvings), cols = j (extrapolation)
+
+      k              j=0             j=1             j=2             j=3             j=4
+   0        0.1712870977
+   1        0.1415928934    0.1316948253
+   2        0.1348680999    0.1326265020    0.1326886138
+   3        0.1332288917    0.1326824890    0.1326862215    0.1326861835
+   4        0.1328216886    0.1326859542    0.1326861852    0.1326861846    0.1326861846
+
+ Converged at k =   4 (diagonal)
+ Best estimate       =     0.1326861846 J
+ Absolute error      =     0.0000000000 J
+ Value to 5 decimals =     0.1326900000 J
